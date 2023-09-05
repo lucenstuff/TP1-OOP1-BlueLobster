@@ -2,7 +2,23 @@ public class Account {
     private String accountHolder;
     private double quantity;
 
-    public Account(String accountHolder,double quantity){
+    private person persona;
+
+    public Account(String accountHolder, double quantity, person persona) {
+        this.accountHolder = accountHolder;
+        this.quantity = quantity;
+        this.persona = persona;
+    }
+
+    public person getPersona() {
+        return persona;
+    }
+
+    public void setPersona(person persona) {
+        this.persona = persona;
+    }
+
+    public Account(String accountHolder, double quantity){
         this.accountHolder = accountHolder;
         this.quantity = quantity;
     }
@@ -51,7 +67,10 @@ public class Account {
             System.out.println("Account holder: "+accountHolder);
             System.out.println("Balance: $"+quantity);
         }
-
+    @Override
+    public String toString() {
+        return "Account{accountHolder='" + accountHolder + "', quantity=" + quantity + "}";
+    }
 
 }
 

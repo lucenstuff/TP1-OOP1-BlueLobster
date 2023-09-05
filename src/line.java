@@ -23,9 +23,16 @@ public class line {
         this.pointB = pointB;
     }
 
+    //Line slope method
+
     public double getSlope(){
         return ((double) (pointB.getY() - pointA.getY()) /((double) pointB.getX() /pointA.getX()));
     }
 
-    public static double calculateDistance(double x1,)
+    //line length method
+    public double calculateLength(){
+       double XDifference = this.pointB.getX()-this.pointA.getX();
+       double YDifference = this.pointB.getY()-this.pointA.getY();
+        return Math.sqrt(Math.pow(XDifference, 2) + Math.pow(YDifference, 2));
+    }
 }
