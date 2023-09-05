@@ -7,7 +7,21 @@ public class person {
     private double weight;
     private double height;
 
+    private Account account;
 
+    public Account getAccount() {
+        return account;
+    }
+
+    public void setAccount(Account account) {
+        this.account = account;
+    }
+
+    public person(String name, int age, Account account) {
+        this.name = name;
+        this.age = age;
+        this.account = account;
+    }
 
     public person() {
     }
@@ -102,7 +116,10 @@ public class person {
 
     //Print all person's data to console
 
-
+    @Override
+    public String toString() {
+        return "Person{name='" + name + "', age=" + age + ", dni='" + dni + "', weight=" + weight + ", height=" + height + "}";
+    }
 
 
 

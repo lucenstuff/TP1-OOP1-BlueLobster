@@ -168,4 +168,7 @@ public class vehicle {
     }
 
 
+    public tires getTires() {
+        return tires;
+    }
 }
